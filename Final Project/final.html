@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Planner & Grocery List Generator</title>
+  <link rel="stylesheet" href="final.css">
+</head>
+<body>
+  <h1>Meal Planner & Grocery List Generator</h1>
+  <div id="greeting"></div>
+
+  <div id="homePage" class="page visible">
+    <button onclick="navigateTo('searchPage')">Recipe Search</button>
+  </div>
+
+  <div id="searchPage" class="page">
+    <input type="text" id="searchInput" placeholder="Search for recipes...">
+    <div id="recipeList"></div>
+    <button onclick="navigateTo('mealPlanPage')">Meal Plan</button>
+  </div>
+
+  <div id="mealPlanPage" class="page">
+    <h2>Meal Plan</h2>
+    <ul id="mealPlanList"></ul>
+<button onclick="makeGroceryList()">Generate Grocery List</button>
+    <button onclick="navigateTo('groceryListPage')">Grocery List</button>
+  </div>
+
+  <div id="groceryListPage" class="page">
+    <h2>Grocery List (click on items when shopped)</h2>
+    <ul id="groceryList"></ul>
+    <button onclick="navigateTo('homePage')">Home</button>
+  </div>
+
+  <script src="final.js"></script>
+</body>
+</html>
